@@ -1,0 +1,30 @@
+{
+  "name": "slc-web",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },...
+}
+{
+  "name": "slc",
+  "version": "1.0.0",
+  "description": "This repository contains the codebase for the **Student Learning Centre (SLC)** website, a comprehensive digital platform designed to enhance the academic and extracurricular experience for students at Madan Mohan Malaviya University of Technology (MMMUT), Lucknow.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebDev4001/SLC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/WebDev4001/SLC/issues"
+  },
+  "homepage": "https://github.com/WebDev4001/SLC#readme"
+}
