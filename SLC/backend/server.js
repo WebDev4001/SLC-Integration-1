@@ -26,6 +26,7 @@ dotenv.config({ path: path.resolve(__dirname, '.env') });
 // Import routes
 const authRoutes = require('./routes/auth');
 const adminRoutes = require('./routes/admin');
+const engageRoutes = require('./routes/engage');
 // Placeholder for other routes mentioned in issue if they were to be integrated
 // const chatbotRoutes = require('./routes/chatbot');
 
@@ -41,6 +42,7 @@ app.use(cors(corsOptions));
 
 // Body parser middleware
 app.use(express.json());
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Connect to MongoDB
 const mongoUri = process.env.MONGO_URI;
@@ -65,6 +67,7 @@ app.get('/api', (req, res) => { // Simple test route for base API
 });
 app.use('/api/auth', authRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api/engage', engageRoutes);
 // app.use('/api/chatbot', chatbotRoutes); // Example if chatbot routes were defined
 
 // i am adding a new set of code just for testing backend
