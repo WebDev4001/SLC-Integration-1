@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About & Council - SLC - MMMUT</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-lato text-gray-800 bg-white">
+
+    <header class="bg-blue-900 text-white shadow-lg sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="images/logo.png" alt="SLC Logo" class="h-12 w-12 mr-3">
+                <div>
+                    <h1 class="text-xl md:text-2xl font-inter font-bold">Student Library Council (SLC)</h1>
+                    <p class="text-sm md:text-base text-gold-300">Madan Mohan Malaviya University of Technology</p>
+                </div>
+            </div>
+            <nav>
+                <ul class="hidden md:flex space-x-6 text-lg">
+                    <li><a href="index.html" class="hover:text-gold-300 transition duration-300">Home</a></li>
+                    <li><a href="council.html" class="text-gold-300 font-semibold">About & Council</a></li>
+                    <li><a href="library.html" class="hover:text-gold-300 transition duration-300">Library Resources</a></li>
+                    <li><a href="engage.html" class="hover:text-gold-300 transition duration-300">Events & Engage</a></li>
+                    <li><a href="path.html" class="hover:text-gold-300 transition duration-300">Ask PATH</a></li>
+                </ul>
+                <button id="mobile-menu-button-council" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </nav>
+        </div>
+        <div id="mobile-menu-council" class="hidden md:hidden bg-blue-800 pb-4">
+            <ul class="flex flex-col items-center space-y-3 text-lg">
+                <li><a href="index.html" class="hover:text-gold-300 transition duration-300 py-2 block">Home</a></li>
+                <li><a href="council.html" class="text-gold-300 font-semibold py-2 block">About & Council</a></li>
+                <li><a href="library.html" class="hover:text-gold-300 transition duration-300 py-2 block">Library Resources</a></li>
+                <li><a href="engage.html" class="hover:text-gold-300 transition duration-300 py-2 block">Events & Engage</a></li>
+                <li><a href="path.html" class="hover:text-gold-300 transition duration-300 py-2 block">Ask PATH</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <section class="mb-16">
+            <h2 class="text-4xl font-inter font-bold text-blue-800 mb-8 text-center animate-fade-in-down">About the Student Library Council</h2>
+            <div class="bg-white p-8 rounded-lg shadow-md animate-fade-in">
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    The Student Library Council (SLC) at Madan Mohan Malaviya University of Technology (MMMUT) is a dedicated body working to enhance the academic library experience for all students, faculty, and alumni. We act as a bridge between the student community and the library administration, advocating for student needs and contributing to the continuous improvement of library services.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Our mission is to foster a vibrant learning environment, promote responsible use of library resources, and organize initiatives that enrich the intellectual life of the university. From suggesting new acquisitions to organizing workshops and cultural events, SLC is committed to making the MMMUT Library a central hub for knowledge and innovation.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-16 bg-ivory p-8 rounded-lg shadow-md animate-fade-in-up">
+            <h3 class="text-3xl font-inter font-bold text-blue-800 mb-6 text-center">A Message from Our Faculty Advisor</h3>
+            <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                <img src="images/advisor-photo.jpg" alt="Faculty Advisor" class="w-40 h-40 rounded-full object-cover mb-6 md:mb-0 shadow-lg">
+                <div>
+                    <p class="text-lg text-gray-700 italic leading-relaxed mb-4">
+                        "The library is the heart of any academic institution, and the Student Library Council plays a crucial role in ensuring its脉动 remains strong and vibrant. I commend the SLC for their dedication in bridging the gap between student aspirations and library resources. Their efforts contribute significantly to a thriving academic culture at MMMUT."
+                    </p>
+                    <p class="text-xl font-semibold text-blue-900">- Dr. Anjali Sharma</p>
+                    <p class="text-md text-gray-600">Faculty Advisor, Student Library Council</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h3 class="text-4xl font-inter font-bold text-blue-800 mb-10 text-center animate-fade-in-down">Our Current Council Members (2024-2025)</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center transform hover:scale-105 transition duration-300 animate-fade-in-up delay-100">
+                    <img src="images/member1.jpg" alt="Member Name" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-gold-300">
+                    <h4 class="text-xl font-inter font-bold text-blue-900 mb-1">Priya Singh</h4>
+                    <p class="text-md text-gray-700">President</p>
+                    <p class="text-sm text-gray-500 mt-2">B.Tech, Computer Science, IV Year</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center transform hover:scale-105 transition duration-300 animate-fade-in-up delay-200">
+                    <img src="images/member2.jpg" alt="Member Name" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-gold-300">
+                    <h4 class="text-xl font-inter font-bold text-blue-900 mb-1">Rahul Kumar</h4>
+                    <p class="text-md text-gray-700">Vice President</p>
+                    <p class="text-sm text-gray-500 mt-2">B.Tech, Electrical Engineering, IV Year</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center transform hover:scale-105 transition duration-300 animate-fade-in-up delay-300">
+                    <img src="images/member3.jpg" alt="Member Name" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-gold-300">
+                    <h4 class="text-xl font-inter font-bold text-blue-900 mb-1">Sneha Gupta</h4>
+                    <p class="text-md text-gray-700">Secretary</p>
+                    <p class="text-sm text-gray-500 mt-2">B.Tech, Civil Engineering, III Year</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center transform hover:scale-105 transition duration-300 animate-fade-in-up delay-400">
+                    <img src="images/member4.jpg" alt="Member Name" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-gold-300">
+                    <h4 class="text-xl font-inter font-bold text-blue-900 mb-1">Arjun Reddy</h4>
+                    <p class="text-md text-gray-700">Treasurer</p>
+                    <p class="text-sm text-gray-500 mt-2">B.Tech, Mechanical Engineering, III Year</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center transform hover:scale-105 transition duration-300 animate-fade-in-up delay-500">
+                    <img src="images/member5.jpg" alt="Member Name" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-gold-300">
+                    <h4 class="text-xl font-inter font-bold text-blue-900 mb-1">Divya Verma</h4>
+                    <p class="text-md text-gray-700">Event Coordinator</p>
+                    <p class="text-sm text-gray-500 mt-2">B.Tech, Chemical Engineering, II Year</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center transform hover:scale-105 transition duration-300 animate-fade-in-up delay-600">
+                    <img src="images/member6.jpg" alt="Member Name" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-gold-300">
+                    <h4 class="text-xl font-inter font-bold text-blue-900 mb-1">Karan Sharma</h4>
+                    <p class="text-md text-gray-700">PR & Marketing Head</p>
+                    <p class="text-sm text-gray-500 mt-2">B.Tech, Information Technology, III Year</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="text-4xl font-inter font-bold text-blue-800 mb-10 text-center animate-fade-in-down">Past Council Archive</h3>
+            <div id="past-council-accordion">
+                <div class="bg-white rounded-lg shadow-md mb-4 animate-fade-in-up delay-100">
+                    <button class="w-full text-left p-6 flex justify-between items-center text-blue-800 text-xl font-inter font-bold focus:outline-none" data-accordion-toggle="2023-2024">
+                        <span>Council Year: 2023-2024</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="accordion-content-2023-2024" class="p-6 border-t border-gray-200 hidden">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-gray-50 p-4 rounded-lg flex items-center space-x-4">
+                                <img src="images/past-member1.jpg" alt="Past Member" class="w-20 h-20 rounded-full object-cover">
+                                <div>
+                                    <h5 class="text-lg font-inter font-bold">Ananya Verma</h5>
+                                    <p class="text-sm text-gray-600">President (2023-2024)</p>
+                                    <p class="text-xs text-gray-500 mt-1">Key achievement: Implemented digital feedback system.</p>
+                                </div>
+                            </div>
+                             <div class="bg-gray-50 p-4 rounded-lg flex items-center space-x-4">
+                                <img src="images/past-member2.jpg" alt="Past Member" class="w-20 h-20 rounded-full object-cover">
+                                <div>
+                                    <h5 class="text-lg font-inter font-bold">Vishal Dixit</h5>
+                                    <p class="text-sm text-gray-600">Secretary (2023-2024)</p>
+                                    <p class="text-xs text-gray-500 mt-1">Organized 3 successful book club events.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md mb-4 animate-fade-in-up delay-200">
+                    <button class="w-full text-left p-6 flex justify-between items-center text-blue-800 text-xl font-inter font-bold focus:outline-none" data-accordion-toggle="2022-2023">
+                        <span>Council Year: 2022-2023</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="accordion-content-2022-2023" class="p-6 border-t border-gray-200 hidden">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-gray-50 p-4 rounded-lg flex items-center space-x-4">
+                                <img src="images/past-member3.jpg" alt="Past Member" class="w-20 h-20 rounded-full object-cover">
+                                <div>
+                                    <h5 class="text-lg font-inter font-bold">Rohan Mehra</h5>
+                                    <p class="text-sm text-gray-600">President (2022-2023)</p>
+                                    <p class="text-xs text-gray-500 mt-1">Initiated 'Adopt a Book' program.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-900 text-white py-10">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h4 class="text-xl font-inter font-bold mb-4">Student Library Council</h4>
+                <p class="text-sm text-gray-300">Madan Mohan Malaviya University of Technology, Gorakhpur, India</p>
+                <img src="images/logo.png" alt="SLC Logo" class="h-10 mt-4 opacity-75">
+            </div>
+            <div>
+                <h4 class="text-xl font-inter font-bold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="council.html" class="text-gray-300 hover:text-gold-300 transition duration-300">About SLC</a></li>
+                    <li><a href="library.html" class="text-gray-300 hover:text-gold-300 transition duration-300">Library Resources</a></li>
+                    <li><a href="engage.html" class="text-gray-300 hover:text-gold-300 transition duration-300">Events & Feedback</a></li>
+                    <li><a href="path.html" class="text-gray-300 hover:text-gold-300 transition duration-300">Ask PATH</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-inter font-bold mb-4">Contact Us</h4>
+                <p class="text-gray-300">Email: <a href="mailto:slc@mmmut.ac.in" class="hover:underline">slc@mmmut.ac.in</a></p>
+                <p class="text-gray-300">Phone: +91-XXXXXXXXXX</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="text-gray-300 hover:text-gold-300"><img src="images/facebook-icon.svg" alt="Facebook" class="h-6"></a>
+                    <a href="#" class="text-gray-300 hover:text-gold-300"><img src="images/instagram-icon.svg" alt="Instagram" class="h-6"></a>
+                    <a href="#" class="text-gray-300 hover:text-gold-300"><img src="images/linkedin-icon.svg" alt="LinkedIn" class="h-6"></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-gray-400 text-sm mt-8">
+            &copy; 2025 Student Library Council, MMMUT. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('mobile-menu-button-council').addEventListener('click', function() {
+            document.getElementById('mobile-menu-council').classList.toggle('hidden');
+        });
+
+        // Accordion functionality for past councils
+        document.querySelectorAll('[data-accordion-toggle]').forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.dataset.accordionToggle;
+                const targetContent = document.getElementById(`accordion-content-${targetId}`);
+                const icon = button.querySelector('svg');
+
+                if (targetContent.classList.contains('hidden')) {
+                    targetContent.classList.remove('hidden');
+                    targetContent.classList.add('accordion-open'); // Add class for animation
+                    icon.classList.add('rotate-180');
+                } else {
+                    targetContent.classList.remove('accordion-open');
+                    targetContent.classList.add('hidden');
+                    icon.classList.remove('rotate-180');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

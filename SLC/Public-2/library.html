@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Resources - SLC - MMMUT</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-lato text-gray-800 bg-white">
+
+    <header class="bg-blue-900 text-white shadow-lg sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="images/logo.png" alt="SLC Logo" class="h-12 w-12 mr-3">
+                <div>
+                    <h1 class="text-xl md:text-2xl font-inter font-bold">Student Library Council (SLC)</h1>
+                    <p class="text-sm md:text-base text-gold-300">Madan Mohan Malaviya University of Technology</p>
+                </div>
+            </div>
+            <nav>
+                <ul class="hidden md:flex space-x-6 text-lg">
+                    <li><a href="index.html" class="hover:text-gold-300 transition duration-300">Home</a></li>
+                    <li><a href="council.html" class="hover:text-gold-300 transition duration-300">About & Council</a></li>
+                    <li><a href="library.html" class="text-gold-300 font-semibold">Library Resources</a></li>
+                    <li><a href="engage.html" class="hover:text-gold-300 transition duration-300">Events & Engage</a></li>
+                    <li><a href="path.html" class="hover:text-gold-300 transition duration-300">Ask PATH</a></li>
+                </ul>
+                <button id="mobile-menu-button-library" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </nav>
+        </div>
+        <div id="mobile-menu-library" class="hidden md:hidden bg-blue-800 pb-4">
+            <ul class="flex flex-col items-center space-y-3 text-lg">
+                <li><a href="index.html" class="hover:text-gold-300 transition duration-300 py-2 block">Home</a></li>
+                <li><a href="council.html" class="hover:text-gold-300 transition duration-300 py-2 block">About & Council</a></li>
+                <li><a href="library.html" class="text-gold-300 font-semibold py-2 block">Library Resources</a></li>
+                <li><a href="engage.html" class="hover:text-gold-300 transition duration-300 py-2 block">Events & Engage</a></li>
+                <li><a href="path.html" class="hover:text-gold-300 transition duration-300 py-2 block">Ask PATH</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <h2 class="text-4xl font-inter font-bold text-blue-800 mb-10 text-center animate-fade-in-down">MMMUT Library Resources</h2>
+
+        <section class="mb-16 bg-white p-8 rounded-lg shadow-md animate-fade-in">
+            <h3 class="text-3xl font-inter font-bold text-blue-800 mb-6">Physical Book Collection</h3>
+            <div class="flex flex-col md:flex-row md:justify-between items-center mb-6 space-y-4 md:space-y-0">
+                <div class="w-full md:w-1/2">
+                    <input type="text" id="book-search" placeholder="Search books by title, author, or ISBN..." class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="w-full md:w-1/3">
+                    <select id="domain-filter" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="all">Filter by Domain</option>
+                        <option value="CS">Computer Science & Engineering</option>
+                        <option value="EE">Electrical Engineering</option>
+                        <option value="Civil">Civil Engineering</option>
+                        <option value="Mech">Mechanical Engineering</option>
+                        <option value="Chem">Chemical Engineering</option>
+                        <option value="IT">Information Technology</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="Math">Mathematics</option>
+                        <option value="Humanities">Humanities</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="book-listings" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-50 p-4 rounded-lg shadow-sm animate-fade-in-up">
+                    <h4 class="text-xl font-inter font-bold text-blue-900 mb-2">Data Structures and Algorithms</h4>
+                    <p class="text-gray-700 mb-1">Author: Thomas H. Cormen et al.</p>
+                    <p class="text-sm text-gray-500 mb-2">Domain: Computer Science</p>
+                    <span class="inline-block bg-green-200 text-green-800 text-xs px-3 py-1 rounded-full font-semibold">Available</span>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg shadow-sm animate-fade-in-up delay-100">
+                    <h4 class="text-xl font-inter font-bold text-blue-900 mb-2">Circuit Analysis</h4>
+                    <p class="text-gray-700 mb-1">Author: Charles K. Alexander</p>
+                    <p class="text-sm text-gray-500 mb-2">Domain: Electrical Engineering</p>
+                    <span class="inline-block bg-yellow-200 text-yellow-800 text-xs px-3 py-1 rounded-full font-semibold">Requested</span>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg shadow-sm animate-fade-in-up delay-200">
+                    <h4 class="text-xl font-inter font-bold text-blue-900 mb-2">Strength of Materials</h4>
+                    <p class="text-gray-700 mb-1">Author: R.C. Hibbeler</p>
+                    <p class="text-sm text-gray-500 mb-2">Domain: Civil Engineering</p>
+                    <span class="inline-block bg-red-200 text-red-800 text-xs px-3 py-1 rounded-full font-semibold">Unavailable</span>
+                </div>
+                </div>
+            <p class="text-center text-gray-600 mt-8">
+                Didn't find what you're looking for? <a href="engage.html#suggest-book" class="text-blue-600 hover:underline">Suggest a book</a>!
+            </p>
+        </section>
+
+        <section class="mb-16 bg-ivory p-8 rounded-lg shadow-md animate-fade-in-up">
+            <h3 class="text-3xl font-inter font-bold text-blue-800 mb-6">Digital Resources & E-Content</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="https://ndl.iitkgp.ac.in/" target="_blank" class="bg-white p-6 rounded-lg shadow-sm flex items-center space-x-4 hover:shadow-lg transition duration-300">
+                    <img src="images/ndli-logo.png" alt="NDLI" class="h-12 w-12 object-contain">
+                    <div>
+                        <h4 class="text-xl font-inter font-bold text-blue-900">National Digital Library of India (NDLI)</h4>
+                        <p class="text-gray-700 text-sm">Vast collection of academic content.</p>
+                    </div>
+                </a>
+                <a href="#" target="_blank" class="bg-white p-6 rounded-lg shadow-sm flex items-center space-x-4 hover:shadow-lg transition duration-300">
+                    <img src="images/ieee-logo.png" alt="IEEE Xplore" class="h-12 w-12 object-contain">
+                    <div>
+                        <h4 class="text-xl font-inter font-bold text-blue-900">IEEE Xplore Digital Library</h4>
+                        <p class="text-gray-700 text-sm">Electrical & Computer Science journals.</p>
+                    </div>
+                </a>
+                <a href="#" target="_blank" class="bg-white p-6 rounded-lg shadow-sm flex items-center space-x-4 hover:shadow-lg transition duration-300">
+                    <img src="images/nptel-logo.png" alt="NPTEL" class="h-12 w-12 object-contain">
+                    <div>
+                        <h4 class="text-xl font-inter font-bold text-blue-900">NPTEL e-Learning Portal</h4>
+                        <p class="text-gray-700 text-sm">Video lectures from IITs & IISc.</p>
+                    </div>
+                </a>
+                <a href="#" target="_blank" class="bg-white p-6 rounded-lg shadow-sm flex items-center space-x-4 hover:shadow-lg transition duration-300">
+                    <img src="images/pdf-icon.png" alt="PDF Resources" class="h-12 w-12 object-contain">
+                    <div>
+                        <h4 class="text-xl font-inter font-bold text-blue-900">Departmental PDFs & Notes</h4>
+                        <p class="text-gray-700 text-sm">Curated collection by departments.</p>
+                    </div>
+                </a>
+                <a href="#" target="_blank" class="bg-white p-6 rounded-lg shadow-sm flex items-center space-x-4 hover:shadow-lg transition duration-300">
+                    <img src="images/competitive-icon.png" alt="Competitive Prep" class="h-12 w-12 object-contain">
+                    <div>
+                        <h4 class="text-xl font-inter font-bold text-blue-900">Competitive Exam Prep Materials</h4>
+                        <p class="text-gray-700 text-sm">GATE, UPSC, GRE resources.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="mb-16 bg-white p-8 rounded-lg shadow-md animate-fade-in-down">
+            <h3 class="text-3xl font-inter font-bold text-blue-800 mb-6">Library Floor Plan</h3>
+            <div class="relative w-full overflow-x-auto">
+                <img src="images/library-floor-plan.png" alt="Library Floor Plan" class="w-full h-auto max-w-full rounded-lg shadow-lg">
+                <div class="absolute top-0 left-0 w-full h-full flex flex-wrap justify-around p-4 text-sm text-white font-semibold">
+                    <div class="absolute bg-blue-700 px-2 py-1 rounded-md opacity-90" style="top: 10%; left: 15%;">CS Section</div>
+                    <div class="absolute bg-blue-700 px-2 py-1 rounded-md opacity-90" style="top: 30%; left: 80%;">Reading Hall</div>
+                    <div class="absolute bg-blue-700 px-2 py-1 rounded-md opacity-90" style="top: 70%; left: 25%;">Journals</div>
+                </div>
+            </div>
+            <p class="text-center text-gray-600 mt-4">Click on sections in the plan for more details (future feature).</p>
+        </section>
+
+        <section class="bg-ivory p-8 rounded-lg shadow-md animate-fade-in-up">
+            <h3 class="text-3xl font-inter font-bold text-blue-800 mb-6">Library Services & Information</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h4 class="text-xl font-inter font-bold text-blue-900 mb-2">Wi-Fi Access</h4>
+                    <p class="text-gray-700">High-speed internet access available throughout the library premises for all students and faculty.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h4 class="text-xl font-inter font-bold text-blue-900 mb-2">Reading Halls</h4>
+                    <p class="text-gray-700">Spacious and quiet reading halls for individual and group study. Separate sections available.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h4 class="text-xl font-inter font-bold text-blue-900 mb-2">Journals & Periodicals</h4>
+                    <p class="text-gray-700">Access to a wide range of national and international academic journals and periodicals.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h4 class="text-xl font-inter font-bold text-blue-900 mb-2">Research Cabin Access</h4>
+                    <p class="text-gray-700">Private research cabins available for M.Tech/Ph.D. scholars on prior booking.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h4 class="text-xl font-inter font-bold text-blue-900 mb-2">Library Timings</h4>
+                    <p class="text-gray-700">Monday - Saturday: 9:00 AM - 9:00 PM</p>
+                    <p class="text-gray-700">Sunday: 10:00 AM - 5:00 PM</p>
+                    <p class="text-gray-500 text-sm mt-1">Extended hours during examination periods.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h4 class="text-xl font-inter font-bold text-blue-900 mb-2">Library Rules & Regulations</h4>
+                    <p class="text-gray-700">Please adhere to the library rules for a conducive learning environment. <a href="#" class="text-blue-600 hover:underline">Read More</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-900 text-white py-10">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h4 class="text-xl font-inter font-bold mb-4">Student Library Council</h4>
+                <p class="text-sm text-gray-300">Madan Mohan Malaviya University of Technology, Gorakhpur, India</p>
+                <img src="images/logo.png" alt="SLC Logo" class="h-10 mt-4 opacity-75">
+            </div>
+            <div>
+                <h4 class="text-xl font-inter font-bold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="council.html" class="text-gray-300 hover:text-gold-300 transition duration-300">About SLC</a></li>
+                    <li><a href="library.html" class="text-gray-300 hover:text-gold-300 transition duration-300">Library Resources</a></li>
+                    <li><a href="engage.html" class="text-gray-300 hover:text-gold-300 transition duration-300">Events & Feedback</a></li>
+                    <li><a href="path.html" class="text-gray-300 hover:text-gold-300 transition duration-300">Ask PATH</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-inter font-bold mb-4">Contact Us</h4>
+                <p class="text-gray-300">Email: <a href="mailto:slc@mmmut.ac.in" class="hover:underline">slc@mmmut.ac.in</a></p>
+                <p class="text-gray-300">Phone: +91-XXXXXXXXXX</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="text-gray-300 hover:text-gold-300"><img src="images/facebook-icon.svg" alt="Facebook" class="h-6"></a>
+                    <a href="#" class="text-gray-300 hover:text-gold-300"><img src="images/instagram-icon.svg" alt="Instagram" class="h-6"></a>
+                    <a href="#" class="text-gray-300 hover:text-gold-300"><img src="images/linkedin-icon.svg" alt="LinkedIn" class="h-6"></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-gray-400 text-sm mt-8">
+            &copy; 2025 Student Library Council, MMMUT. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('mobile-menu-button-library').addEventListener('click', function() {
+            document.getElementById('mobile-menu-library').classList.toggle('hidden');
+        });
+
+        // Basic Book Search and Filter (client-side, for demo)
+        const books = [
+            { title: 'Data Structures and Algorithms', author: 'Thomas H. Cormen et al.', domain: 'CS', status: 'Available' },
+            { title: 'Circuit Analysis', author: 'Charles K. Alexander', domain: 'EE', status: 'Requested' },
+            { title: 'Strength of Materials', author: 'R.C. Hibbeler', domain: 'Civil', status: 'Unavailable' },
+            { title: 'Operating Systems Concepts', author: 'Abraham Silberschatz', domain: 'CS', status: 'Available' },
+            { title: 'Digital Signal Processing', author: 'John G. Proakis', domain: 'EE', status: 'Available' },
+            { title: 'Fluid Mechanics', author: 'Frank M. White', domain: 'Civil', status: 'Available' },
+            { title: 'Thermodynamics: An Engineering Approach', author: 'Yunus A. Cengel', domain: 'Mech', status: 'Requested' },
+            { title: 'Organic Chemistry', author: 'Paula Yurkanis Bruice', domain: 'Chemistry', status: 'Available' },
+            { title: 'Calculus: Early Transcendentals', author: 'James Stewart', domain: 'Math', status: 'Available' },
+            { title: 'Engineering Mechanics', author: 'R.C. Hibbeler', domain: 'Mech', status: 'Available' },
+            { title: 'Data Communications and Networking', author: 'Behrouz A. Forouzan', domain: 'IT', status: 'Available' },
+            { title: 'Concrete Technology', author: 'M.S. Shetty', domain: 'Civil', status: 'Available' },
+        ];
+
+        function renderBooks(filteredBooks) {
+            const bookListings = document.getElementById('book-listings');
+            bookListings.innerHTML = '';
+            filteredBooks.forEach(book => {
+                let statusClass = '';
+                if (book.status === 'Available') statusClass = 'bg-green-200 text-green-800';
+                else if (book.status === 'Requested') statusClass = 'bg-yellow-200 text-yellow-800';
+                else statusClass = 'bg-red-200 text-red-800';
+
+                bookListings.innerHTML += `
+                    <div class="bg-gray-50 p-4 rounded-lg shadow-sm animate-fade-in-up">
+                        <h4 class="text-xl font-inter font-bold text-blue-900 mb-2">${book.title}</h4>
+                        <p class="text-gray-700 mb-1">Author: ${book.author}</p>
+                        <p class="text-sm text-gray-500 mb-2">Domain: ${book.domain}</p>
+                        <span class="inline-block ${statusClass} text-xs px-3 py-1 rounded-full font-semibold">${book.status}</span>
+                    </div>
+                `;
+            });
+        }
+
+        document.getElementById('book-search').addEventListener('keyup', (event) => {
+            const searchTerm = event.target.value.toLowerCase();
+            const selectedDomain = document.getElementById('domain-filter').value;
+
+            const filtered = books.filter(book => {
+                const matchesSearch = book.title.toLowerCase().includes(searchTerm) || book.author.toLowerCase().includes(searchTerm);
+                const matchesDomain = selectedDomain === 'all' || book.domain === selectedDomain;
+                return matchesSearch && matchesDomain;
+            });
+            renderBooks(filtered);
+        });
+
+        document.getElementById('domain-filter').addEventListener('change', (event) => {
+            const selectedDomain = event.target.value;
+            const searchTerm = document.getElementById('book-search').value.toLowerCase();
+
+            const filtered = books.filter(book => {
+                const matchesSearch = book.title.toLowerCase().includes(searchTerm) || book.author.toLowerCase().includes(searchTerm);
+                const matchesDomain = selectedDomain === 'all' || book.domain === selectedDomain;
+                return matchesSearch && matchesDomain;
+            });
+            renderBooks(filtered);
+        });
+
+        // Initial render
+        renderBooks(books);
+    </script>
+</body>
+</html>

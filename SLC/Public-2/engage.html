@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Engage - SLC - MMMUT</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-lato text-gray-800 bg-white">
+
+    <header class="bg-blue-900 text-white shadow-lg sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="images/logo.png" alt="SLC Logo" class="h-12 w-12 mr-3">
+                <div>
+                    <h1 class="text-xl md:text-2xl font-inter font-bold">Student Library Council (SLC)</h1>
+                    <p class="text-sm md:text-base text-gold-300">Madan Mohan Malaviya University of Technology</p>
+                </div>
+            </div>
+            <nav>
+                <ul class="hidden md:flex space-x-6 text-lg">
+                    <li><a href="index.html" class="hover:text-gold-300 transition duration-300">Home</a></li>
+                    <li><a href="council.html" class="hover:text-gold-300 transition duration-300">About & Council</a></li>
+                    <li><a href="library.html" class="hover:text-gold-300 transition duration-300">Library Resources</a></li>
+                    <li><a href="engage.html" class="text-gold-300 font-semibold">Events & Engage</a></li>
+                    <li><a href="path.html" class="hover:text-gold-300 transition duration-300">Ask PATH</a></li>
+                </ul>
+                <button id="mobile-menu-button-engage" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </nav>
+        </div>
+        <div id="mobile-menu-engage" class="hidden md:hidden bg-blue-800 pb-4">
+            <ul class="flex flex-col items-center space-y-3 text-lg">
+                <li><a href="index.html" class="hover:text-gold-300 transition duration-300 py-2 block">Home</a></li>
+                <li><a href="council.html" class="hover:text-gold-300 transition duration-300 py-2 block">About & Council</a></li>
+                <li><a href="library.html" class="hover:text-gold-300 transition duration-300 py-2 block">Library Resources</a></li>
+                <li><a href="engage.html" class="text-gold-300 font-semibold py-2 block">Events & Engage</a></li>
+                <li><a href="path.html" class="hover:text-gold-300 transition duration-300 py-2 block">Ask PATH</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <h2 class="text-4xl font-inter font-bold text-blue-800 mb-10 text-center animate-fade-in-down">Engage with SLC</h2>
+
+        <section id="events" class="mb-16 bg-white p-8 rounded-lg shadow-md animate-fade-in">
+            <h3 class="text-3xl font-inter font-bold text-blue-800 mb-6">Our Past Events</h3>
+            <div class="flex flex-col md:flex-row md:justify-end items-center mb-6 space-y-4 md:space-y-0 md:space-x-4">
+                <select id="event-year-filter" class="w-full md:w-auto p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="all">Filter by Year</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                </select>
+                <select id="event-type-filter" class="w-full md:w-auto p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="all">Filter by Type</option>
+                    <option value="workshop">Workshop</option>
+                    <option value="fair">Book Fair</option>
+                    <option value="seminar">Seminar</option>
+                    <option value="competition">Competition</option>
+                </select>
+            </div>
+
+            <div id="event-gallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden animate-fade-in-up">
+                    <img src="images/event1.jpg" alt="Event Name" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-inter font-bold text-blue-900 mb-2">Research Paper Writing Workshop</h4>
+                        <p class="text-gray-700 text-sm mb-2">Date: June 1, 2025 | Type: Workshop</p>
+                        <p class="text-gray-600 text-sm">A highly interactive workshop on effective research paper writing techniques.</p>
+                        <a href="#" class="text-blue-600 hover:underline mt-3 inline-block">View Details</a>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden animate-fade-in-up delay-100">
+                    <img src="images/event2.jpg" alt="Event Name" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-inter font-bold text-blue-900 mb-2">Annual Book Fair 2024</h4>
+                        <p class="text-gray-700 text-sm mb-2">Date: November 15-17, 2024 | Type: Fair</p>
+                        <p class="text-gray-600 text-sm">Showcasing a wide range of books and educational materials.</p>
+                        <a href="#" class="text-blue-600 hover:underline mt-3 inline-block">View Details</a>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden animate-fade-in-up delay-200">
+                    <img src="images/event3.jpg" alt="Event Name" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-inter font-bold text-blue-900 mb-2">Literary Quiz Competition</h4>
+                        <p class="text-gray-700 text-sm mb-2">Date: February 10, 2024 | Type: Competition</p>
+                        <p class="text-gray-600 text-sm">Engaging quiz for all literature enthusiasts.</p>
+                        <a href="#" class="text-blue-600 hover:underline mt-3 inline-block">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">Load More Events</button>
+            </div>
+        </section>
+
+        <section id="suggest-book" class="mb-16 bg-ivory p-8 rounded-lg shadow-md animate-fade-in-up">
+            <h3 class="text-3xl font-inter font-bold text-blue-800 mb-6 text-center">Suggest a Book or Resource</h3>
+            <form action="#" method="POST" class="max-w-xl mx-auto">
+                <div class="mb-4">
+                    <label for="resource-type" class="block text-gray-700 text-sm font-bold mb-2">Type of Resource:</label>
+                    <select id="resource-type" name="resource_type" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        <option value="">Select Type</option>
+                        <option value="book">Book</option>
+                        <option value="journal">Journal/Periodical</option>
+                        <option value="ebook">E-Book</option>
+                        <option value="software">Software/Tool</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="resource-title" class="block text-gray-700 text-sm font-bold mb-2">Title:</label>
+                    <input type="text" id="resource-title" name="resource_title" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="resource-author" class="block text-gray-700 text-sm font-bold mb-2">Author/Publisher (Optional):</label>
+                    <input type="text" id="resource-author" name="resource_author" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="mb-4">
+                    <label for="resource-reason" class="block text-gray-700 text-sm font-bold mb-2">Reason for Suggestion (Optional):</label>
+                    <textarea id="resource-reason" name="resource_reason" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+                <div class="mb-4">
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" name="anonymous" class="form-checkbox h-5 w-5 text-blue-600">
+                        <span class="ml-2 text-gray-700">Submit Anonymously</span>
+                    </label>
+                </div>
+                <div class="mb-6">
+                    <label for="file-upload" class="block text-gray-700 text-sm font-bold mb-2">Attach supporting document (e.g., syllabus, review - Optional):</label>
+                    <input type="file" id="file-upload" name="file_upload" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300">Submit Suggestion</button>
+            </form>
+        </section>
+
+        <section id="join-slc" class="mb-16 bg-white p-8 rounded-lg shadow-md animate-fade-in-down">
+            <h3 class="text-3xl font-inter font-bold text-blue-800 mb-6 text-center">Join the SLC Team!</h3>
+            <div class="text-center text-gray-700 mb-8">
+                <p>Are you passionate about books, libraries, and student welfare? Join the Student Library Council and make a real difference!</p>
+                <p class="mt-2 text-gold-600 font-semibold">"Being part of SLC has been an incredibly rewarding experience. It's a chance to contribute to the academic community and develop leadership skills." - Sakshi Sharma, Ex-SLC Member</p>
+            </div>
+            <form action="#" method="POST" class="max-w-xl mx-auto">
+                <div class="mb-4">
+                    <label for="applicant-name" class="block text-gray-700 text-sm font-bold mb-2">Full Name:</label>
+                    <input type="text" id="applicant-name" name="applicant_name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="applicant-email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                    <input type="email" id="applicant-email" name="applicant_email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="applicant-roll" class="block text-gray-700 text-sm font-bold mb-2">Roll Number:</label>
+                    <input type="text" id="applicant-roll" name="applicant_roll" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="applicant-branch" class="block text-gray-700 text-sm font-bold mb-2">Branch & Year:</label>
+                    <input type="text" id="applicant-branch" name="applicant_branch" placeholder="e.g., CSE, III Year" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="applicant-motivation" class="block text-gray-700 text-sm font-bold mb-2">Why do you want to join SLC? (Min 100 words)</label>
+                    <textarea id="applicant-motivation" name="applicant_motivation" rows="6" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                </div>
+                <div class="mb-6">
+                    <label for="applicant-resume" class="block text-gray-700 text-sm font-bold mb-2">Upload Resume (PDF only):</label>
+                    <input type="file" id="applicant-resume" name="applicant_resume" accept=".pdf" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300">Submit Application</button>
+            </form>
+        </section>
+
+        <section id="contact-feedback" class="bg-ivory p-8 rounded-lg shadow-md animate-fade-in-up">
+            <h3 class="text-3xl font-inter font-bold text-blue-800 mb-6 text-center">General Feedback & Contact</h3>
+            <p class="text-center text-gray-700 mb-8">Have a general query, suggestion, or feedback for the SLC or Library? Let us know!</p>
+            <form action="#" method="POST" class="max-w-xl mx-auto">
+                <div class="mb-4">
+                    <label for="feedback-name" class="block text-gray-700 text-sm font-bold mb-2">Your Name (Optional):</label>
+                    <input type="text" id="feedback-name" name="feedback_name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="mb-4">
+                    <label for="feedback-email" class="block text-gray-700 text-sm font-bold mb-2">Your Email (Optional):</label>
+                    <input type="email" id="feedback-email" name="feedback_email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="mb-4">
+                    <label for="feedback-subject" class="block text-gray-700 text-sm font-bold mb-2">Subject:</label>
+                    <input type="text" id="feedback-subject" name="feedback_subject" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="feedback-message" class="block text-gray-700 text-sm font-bold mb-2">Your Message:</label>
+                    <textarea id="feedback-message" name="feedback_message" rows="6" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300">Send Message</button>
+            </form>
+
+            <div class="mt-12 text-center">
+                <h4 class="text-2xl font-inter font-bold text-blue-800 mb-4">Find Us on Map</h4>
+                <div class="map-container bg-gray-200 rounded-lg overflow-hidden h-64 md:h-80 shadow-md">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.4284564887373!2d83.39958321500995!3d26.78280658315132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3991264c18f1a1d1%3A0x889c25608b47915!2sMadan%20Mohan%20Malaviya%20University%20of%20Technology!5e0!3m2!1sen!2sin!4v1678886400000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="flex justify-center space-x-6 mt-8">
+                    <a href="#" class="text-blue-700 hover:text-blue-900 text-lg flex items-center space-x-2">
+                        <img src="images/facebook-blue.svg" alt="Facebook" class="h-8 w-8"><span>Facebook</span>
+                    </a>
+                    <a href="#" class="text-blue-700 hover:text-blue-900 text-lg flex items-center space-x-2">
+                        <img src="images/instagram-blue.svg" alt="Instagram" class="h-8 w-8"><span>Instagram</span>
+                    </a>
+                    <a href="#" class="text-blue-700 hover:text-blue-900 text-lg flex items-center space-x-2">
+                        <img src="images/linkedin-blue.svg" alt="LinkedIn" class="h-8 w-8"><span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-900 text-white py-10">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h4 class="text-xl font-inter font-bold mb-4">Student Library Council</h4>
+                <p class="text-sm text-gray-300">Madan Mohan Malaviya University of Technology, Gorakhpur, India</p>
+                <img src="images/logo.png" alt="SLC Logo" class="h-10 mt-4 opacity-75">
+            </div>
+            <div>
+                <h4 class="text-xl font-inter font-bold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="council.html" class="text-gray-300 hover:text-gold-300 transition duration-300">About SLC</a></li>
+                    <li><a href="library.html" class="text-gray-300 hover:text-gold-300 transition duration-300">Library Resources</a></li>
+                    <li><a href="engage.html" class="text-gray-300 hover:text-gold-300 transition duration-300">Events & Feedback</a></li>
+                    <li><a href="path.html" class="text-gray-300 hover:text-gold-300 transition duration-300">Ask PATH</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-inter font-bold mb-4">Contact Us</h4>
+                <p class="text-gray-300">Email: <a href="mailto:slc@mmmut.ac.in" class="hover:underline">slc@mmmut.ac.in</a></p>
+                <p class="text-gray-300">Phone: +91-XXXXXXXXXX</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="text-gray-300 hover:text-gold-300"><img src="images/facebook-icon.svg" alt="Facebook" class="h-6"></a>
+                    <a href="#" class="text-gray-300 hover:text-gold-300"><img src="images/instagram-icon.svg" alt="Instagram" class="h-6"></a>
+                    <a href="#" class="text-gray-300 hover:text-gold-300"><img src="images/linkedin-icon.svg" alt="LinkedIn" class="h-6"></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-gray-400 text-sm mt-8">
+            &copy; 2025 Student Library Council, MMMUT. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('mobile-menu-button-engage').addEventListener('click', function() {
+            document.getElementById('mobile-menu-engage').classList.toggle('hidden');
+        });
+
+        // Basic Event Filtering (client-side for demo)
+        const events = [
+            { title: 'Research Paper Writing Workshop', date: 'June 1, 2025', type: 'workshop', year: '2025', image: 'images/event1.jpg' },
+            { title: 'Annual Book Fair 2024', date: 'November 15-17, 2024', type: 'fair', year: '2024', image: 'images/event2.jpg' },
+            { title: 'Literary Quiz Competition', date: 'February 10, 2024', type: 'competition', year: '2024', image: 'images/event3.jpg' },
+            { title: 'Guest Lecture: Future of Libraries', date: 'September 5, 2023', type: 'seminar', year: '2023', image: 'images/event4.jpg' },
+            { title: 'Coding Book Marathon', date: 'April 20, 2024', type: 'competition', year: '2024', image: 'images/event5.jpg' },
+            { title: 'Career Guidance Seminar', date: 'March 10, 2025', type: 'seminar', year: '2025', image: 'images/event6.jpg' },
+        ];
+
+        function renderEvents(filteredEvents) {
+            const eventGallery = document.getElementById('event-gallery');
+            eventGallery.innerHTML = '';
+            filteredEvents.forEach(event => {
+                eventGallery.innerHTML += `
+                    <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden animate-fade-in-up">
+                        <img src="${event.image}" alt="${event.title}" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="text-xl font-inter font-bold text-blue-900 mb-2">${event.title}</h4>
+                            <p class="text-gray-700 text-sm mb-2">Date: ${event.date} | Type: ${event.type.charAt(0).toUpperCase() + event.type.slice(1)}</p>
+                            <p class="text-gray-600 text-sm">Description of the event goes here...</p>
+                            <a href="#" class="text-blue-600 hover:underline mt-3 inline-block">View Details</a>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        document.getElementById('event-year-filter').addEventListener('change', filterEvents);
+        document.getElementById('event-type-filter').addEventListener('change', filterEvents);
+
+        function filterEvents() {
+            const selectedYear = document.getElementById('event-year-filter').value;
+            const selectedType = document.getElementById('event-type-filter').value;
+
+            const filtered = events.filter(event => {
+                const matchesYear = selectedYear === 'all' || event.year === selectedYear;
+                const matchesType = selectedType === 'all' || event.type === selectedType;
+                return matchesYear && matchesType;
+            });
+            renderEvents(filtered);
+        }
+
+        // Initial render
+        renderEvents(events);
+
+        // Form submission handling (for demonstration, just logs to console)
+        document.querySelector('#suggest-book form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Book suggestion submitted! (Form submission logic would connect to backend)');
+            this.reset();
+        });
+
+        document.querySelector('#join-slc form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('SLC application submitted! (Form submission logic would connect to backend)');
+            this.reset();
+        });
+
+        document.querySelector('#contact-feedback form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Feedback submitted! (Form submission logic would connect to backend)');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

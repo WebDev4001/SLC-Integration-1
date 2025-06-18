@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Student Library Council (SLC) - MMMUT</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"> </head>
+<body class="font-lato text-gray-800 bg-white">
+
+    <div id="loading-spinner" class="fixed inset-0 bg-white flex items-center justify-center z-50">
+        <div class="animate-spin rounded-full h-20 w-20 border-t-4 border-b-4 border-blue-800"></div>
+    </div>
+
+    <header class="bg-blue-900 text-white shadow-lg sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="images/logo.png" alt="SLC Logo" class="h-12 w-12 mr-3 animate-fade-in">
+                <div>
+                    <h1 class="text-xl md:text-2xl font-inter font-bold">Student Library Council (SLC)</h1>
+                    <p class="text-sm md:text-base text-gold-300">Madan Mohan Malaviya University of Technology</p>
+                </div>
+            </div>
+            <nav>
+                <ul class="hidden md:flex space-x-6 text-lg">
+                    <li><a href="index.html" class="hover:text-gold-300 transition duration-300">Home</a></li>
+                    <li><a href="council.html" class="hover:text-gold-300 transition duration-300">About & Council</a></li>
+                    <li><a href="library.html" class="hover:text-gold-300 transition duration-300">Library Resources</a></li>
+                    <li><a href="engage.html" class="hover:text-gold-300 transition duration-300">Events & Engage</a></li>
+                    <li><a href="path.html" class="hover:text-gold-300 transition duration-300">Ask PATH</a></li>
+                </ul>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </nav>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-800 pb-4">
+            <ul class="flex flex-col items-center space-y-3 text-lg">
+                <li><a href="index.html" class="hover:text-gold-300 transition duration-300 py-2 block">Home</a></li>
+                <li><a href="council.html" class="hover:text-gold-300 transition duration-300 py-2 block">About & Council</a></li>
+                <li><a href="library.html" class="hover:text-gold-300 transition duration-300 py-2 block">Library Resources</a></li>
+                <li><a href="engage.html" class="hover:text-gold-300 transition duration-300 py-2 block">Events & Engage</a></li>
+                <li><a href="path.html" class="hover:text-gold-300 transition duration-300 py-2 block">Ask PATH</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="relative bg-gradient-to-r from-blue-700 to-blue-900 text-white py-20 overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center opacity-30 animate-pulse" style="background-image: url('images/hero-bg.svg');"></div>
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <h2 class="text-4xl md:text-6xl font-inter font-bold mb-4 animate-fade-in-up">Empowering Minds Through Knowledge</h2>
+            <p class="text-xl md:text-2xl mb-8 animate-fade-in-up delay-100">Your gateway to academic excellence at MMMUT Library</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+                <a href="engage.html#suggest-book" class="bg-gold-500 hover:bg-gold-600 text-blue-900 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 animate-fade-in-up delay-200">Suggest a Book</a>
+                <a href="engage.html#join-slc" class="bg-white hover:bg-gray-100 text-blue-900 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 animate-fade-in-up delay-300">Join SLC</a>
+                <a href="path.html" class="bg-blue-800 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 animate-fade-in-up delay-400">Ask PATH</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-ivory py-16 text-center">
+        <div class="container mx-auto px-4">
+            <blockquote class="text-2xl md:text-3xl font-inter italic text-gray-700 leading-relaxed mb-4 animate-fade-in">
+                "The only thing you absolutely have to know is the location of the library."
+            </blockquote>
+            <cite class="text-lg text-gray-600 font-semibold animate-fade-in delay-100">- Albert Einstein</cite>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-white p-6 rounded-lg shadow-md animate-fade-in-right">
+                    <h3 class="text-2xl font-inter font-bold text-blue-800 mb-4">Latest Announcements</h3>
+                    <div class="h-40 overflow-hidden relative">
+                        <div id="announcement-ticker" class="absolute inset-x-0 top-0 w-full animate-marquee-up">
+                            <ul class="space-y-3">
+                                <li class="text-lg text-gray-700">📚 New arrivals for Civil Engineering section available.</li>
+                                <li class="text-lg text-gray-700">🗓️ Workshop on research paper writing on July 20th.</li>
+                                <li class="text-lg text-gray-700">📖 Library timings extended during exam period (June 15 - July 10).</li>
+                                <li class="text-lg text-gray-700">📢 Call for volunteers for the upcoming Book Fair!</li>
+                                <li class="text-lg text-gray-700">⚙️ New e-journals added to the digital resources portal.</li>
+                                <li class="text-lg text-gray-700">📚 New arrivals for Civil Engineering section available.</li>
+                                <li class="text-lg text-gray-700">🗓️ Workshop on research paper writing on July 20th.</li>
+                                <li class="text-lg text-gray-700">📖 Library timings extended during exam period (June 15 - July 10).</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="engage.html#events" class="text-blue-600 hover:underline mt-4 inline-block">View All Announcements</a>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md animate-fade-in-left">
+                    <h3 class="text-2xl font-inter font-bold text-blue-800 mb-4">Featured Event</h3>
+                    <div class="relative rounded-lg overflow-hidden mb-4">
+                        <img src="images/event-placeholder.jpg" alt="Featured Event" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-4">
+                            <h4 class="text-white text-xl font-bold">Annual Book Donation Drive</h4>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-3">Join us in our annual book donation drive to enrich our library's collection. Your contributions make a difference!</p>
+                    <p class="text-sm text-gray-500 mb-4">Date: August 10, 2025 | Venue: Library Ground Floor</p>
+                    <a href="engage.html#events" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-blue-900 py-16 text-white text-center">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl md:text-4xl font-inter font-bold mb-8 animate-fade-in">Get Involved with SLC!</h3>
+            <div class="flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-8">
+                <div class="bg-white text-blue-900 p-8 rounded-lg shadow-xl transform hover:scale-105 transition duration-300 animate-fade-in-up">
+                    <h4 class="text-2xl font-inter font-bold mb-4">Suggest a New Book</h4>
+                    <p class="mb-6">Help us expand our collection with your recommendations.</p>
+                    <a href="engage.html#suggest-book" class="bg-gold-500 hover:bg-gold-600 text-blue-900 font-bold py-3 px-8 rounded-full">Suggest Now</a>
+                </div>
+                <div class="bg-white text-blue-900 p-8 rounded-lg shadow-xl transform hover:scale-105 transition duration-300 animate-fade-in-up delay-100">
+                    <h4 class="text-2xl font-inter font-bold mb-4">Join the SLC Team</h4>
+                    <p class="mb-6">Be a part of shaping the library experience for everyone.</p>
+                    <a href="engage.html#join-slc" class="bg-gold-500 hover:bg-gold-600 text-blue-900 font-bold py-3 px-8 rounded-full">Apply Today</a>
+                </div>
+                <div class="bg-white text-blue-900 p-8 rounded-lg shadow-xl transform hover:scale-105 transition duration-300 animate-fade-in-up delay-200">
+                    <h4 class="text-2xl font-inter font-bold mb-4">Chat with PATH</h4>
+                    <p class="mb-6">Your personal assistant for library and SLC queries.</p>
+                    <a href="path.html" class="bg-gold-500 hover:bg-gold-600 text-blue-900 font-bold py-3 px-8 rounded-full">Ask PATH</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-blue-900 text-white py-10">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h4 class="text-xl font-inter font-bold mb-4">Student Library Council</h4>
+                <p class="text-sm text-gray-300">Madan Mohan Malaviya University of Technology, Gorakhpur, India</p>
+                <img src="images/logo.png" alt="SLC Logo" class="h-10 mt-4 opacity-75">
+            </div>
+            <div>
+                <h4 class="text-xl font-inter font-bold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="council.html" class="text-gray-300 hover:text-gold-300 transition duration-300">About SLC</a></li>
+                    <li><a href="library.html" class="text-gray-300 hover:text-gold-300 transition duration-300">Library Resources</a></li>
+                    <li><a href="engage.html" class="text-gray-300 hover:text-gold-300 transition duration-300">Events & Feedback</a></li>
+                    <li><a href="path.html" class="text-gray-300 hover:text-gold-300 transition duration-300">Ask PATH</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-inter font-bold mb-4">Contact Us</h4>
+                <p class="text-gray-300">Email: <a href="mailto:slc@mmmut.ac.in" class="hover:underline">slc@mmmut.ac.in</a></p>
+                <p class="text-gray-300">Phone: +91-XXXXXXXXXX</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="text-gray-300 hover:text-gold-300"><img src="images/facebook-icon.svg" alt="Facebook" class="h-6"></a>
+                    <a href="#" class="text-gray-300 hover:text-gold-300"><img src="images/instagram-icon.svg" alt="Instagram" class="h-6"></a>
+                    <a href="#" class="text-gray-300 hover:text-gold-300"><img src="images/linkedin-icon.svg" alt="LinkedIn" class="h-6"></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-gray-400 text-sm mt-8">
+            &copy; 2025 Student Library Council, MMMUT. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Example for mobile menu toggle (main.js will have more)
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
