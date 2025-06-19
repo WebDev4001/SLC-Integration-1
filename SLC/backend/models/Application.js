@@ -11,6 +11,11 @@ const ApplicationSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     },
+    status: {
+        type: String,
+        default: 'submitted',
+        enum: ['submitted', 'under review', 'shortlisted', 'rejected', 'selected']
+    },
     createdAt: { type: Date, default: Date.now }
 });
 

@@ -5,6 +5,15 @@
 * User authentication (Register/Login with JWT)
 * Google Sign-In integration (manual token verification, new user flow with Roll Number)
 * Role-based admin controls (update/delete users, admin safety logic)
+* **Admin Panel APIs:**
+    *   Enhanced user management:
+        *   List all users with optional role-based filtering.
+        *   View detailed information for a single user, including full device history.
+    *   Export user logs (including device information) as a CSV file.
+    *   View and manage submissions:
+        *   List suggestions, applications, and feedback items (with status filtering).
+        *   Update the status of individual suggestions, applications, and feedback.
+    *   Access backend statistics (user counts by role, submission totals, etc.).
 * Suggestions, applications, and feedback handling with file uploads (Multer)
 * Device logging for login events (limited to 5 entries)
 * Secure file uploads with Multer (PDF and images) with basic validation

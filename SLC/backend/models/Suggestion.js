@@ -11,6 +11,11 @@ const SuggestionSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     },
+    status: {
+        type: String,
+        default: 'pending',
+        enum: ['pending', 'approved', 'rejected', 'implemented']
+    },
     createdAt: { type: Date, default: Date.now }
 });
 

@@ -9,6 +9,11 @@ const FeedbackSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     },
+    status: {
+        type: String,
+        default: 'new',
+        enum: ['new', 'read', 'acknowledged', 'archived']
+    },
     createdAt: { type: Date, default: Date.now }
 });
 

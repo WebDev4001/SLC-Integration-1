@@ -41,7 +41,7 @@ const uploadResume = multer({
 });
 
 // POST /api/engage/suggest - Handles book/resource suggestions
-router.post("/suggest", uploadSuggestion.single('file_upload'), async (req, res) => { // Intentionally using double quotes to ensure no hidden chars from single quotes
+router.post("/suggest", uploadSuggestion.single('file_upload'), async (req, res) => {
     const { resource_type, resource_title, resource_author, resource_reason, anonymous } = req.body;
 
     if (!resource_type || !resource_title) {
@@ -68,7 +68,7 @@ router.post("/suggest", uploadSuggestion.single('file_upload'), async (req, res)
 });
 
 // POST /api/engage/apply - Handles SLC applications
-router.post('/apply', uploadResume.single('applicant_resume'), async (req, res) => {
+router.post("/apply", uploadResume.single('applicant_resume'), async (req, res) => { // Using double quotes
     const { applicant_name, applicant_email, applicant_roll, applicant_branch, applicant_motivation } = req.body;
 
     if (!applicant_name || !applicant_email || !applicant_roll || !applicant_branch || !applicant_motivation) {
@@ -102,7 +102,7 @@ router.post('/apply', uploadResume.single('applicant_resume'), async (req, res) 
 });
 
 // POST /api/engage/feedback - Handles general feedback
-router.post('/feedback', async (req, res) => {
+router.post("/feedback", async (req, res) => { // Using double quotes
     const { feedback_name, feedback_email, feedback_subject, feedback_message } = req.body;
 
     if (!feedback_subject || !feedback_message) {
