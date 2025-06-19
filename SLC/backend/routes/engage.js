@@ -41,7 +41,7 @@ const uploadResume = multer({
 });
 
 // POST /api/engage/suggest - Handles book/resource suggestions
-router.post('/suggest', uploadSuggestion.single('file_upload'), async (req, res) => {
+router.post("/suggest", uploadSuggestion.single('file_upload'), async (req, res) => { // Intentionally using double quotes to ensure no hidden chars from single quotes
     const { resource_type, resource_title, resource_author, resource_reason, anonymous } = req.body;
 
     if (!resource_type || !resource_title) {

@@ -30,6 +30,17 @@ const userSchema = new mongoose.Schema({
         enum: ['viewer', 'editor', 'admin'],
         default: 'viewer'
     },
+    rollNumber: {
+        type: String,
+        unique: true,
+        sparse: true, // Allows null/undefined values for non-Google users while enforcing uniqueness for those who have it
+        match: [/^20\d{7}$/, 'Invalid Roll Number format. Must be 20XXXXXXX.'] // Matches '20' followed by 7 digits
+    },
+    googleId: { // To store Google's unique user ID, useful for linking
+        type: String,
+        unique: true,
+        sparse: true
+    },
     deviceInfo: [deviceInfoSchema]
 }, { timestamps: true });
 
