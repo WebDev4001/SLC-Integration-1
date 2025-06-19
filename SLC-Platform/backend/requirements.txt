@@ -1,0 +1,12 @@
+Django~=4.2
+djangorestframework~=3.14
+psycopg2-binary~=2.9
+djangorestframework-simplejwt~=5.3
+django-cors-headers~=4.0
+python-dotenv~=1.0
+django-filter~=23.5
+django-ratelimit~=3.0
+gunicorn~=21.2
+requests~=2.31 # For making HTTP requests, e.g., to Google's tokeninfo endpoint
+# google-auth-library # Alternative for Google token verification, more robust
+# For CSV export, Django's built-in capabilities or Python's 'csv' module can be used.
